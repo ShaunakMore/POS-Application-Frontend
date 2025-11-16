@@ -302,7 +302,7 @@ if page == "💬 Chat":
         if not st.session_state.tasks:
             fetch_tasks()
         
-        if st.session_state.tasks.get("tasks"):
+        if st.session_state.tasks:
             # Handle both nested and flat response structures
             tasks_list = st.session_state.tasks.get("tasks", st.session_state.tasks) if isinstance(st.session_state.tasks, dict) else st.session_state.tasks
             
