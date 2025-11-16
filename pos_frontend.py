@@ -305,7 +305,7 @@ if page == "💬 Chat":
         if st.session_state.tasks:
             # Handle both nested and flat response structures
             tasks_list = st.session_state.tasks.get("tasks")
-            
+            print(st.session_state.tasks)
             # Group by priority
             high_tasks = [t for t in tasks_list if t.get("priority") == "High"]
             medium_tasks = [t for t in tasks_list if t.get("priority") == "Medium"]
