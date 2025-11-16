@@ -304,7 +304,7 @@ if page == "💬 Chat":
         
         if st.session_state.tasks:
             # Handle both nested and flat response structures
-            tasks_list = st.session_state.tasks.get("tasks", st.session_state.tasks) if isinstance(st.session_state.tasks, dict) else st.session_state.tasks
+            tasks_list = st.session_state.tasks.get("tasks")
             
             # Group by priority
             high_tasks = [t for t in tasks_list if t.get("priority") == "High"]
@@ -346,9 +346,9 @@ if page == "💬 Chat":
         if not st.session_state.events:
             fetch_events()
         
-        if st.session_state.events.get("events"):
+        if st.session_state.events:
             # Handle both nested and flat response structures
-            events_list = st.session_state.events.get("events", st.session_state.events) if isinstance(st.session_state.events, dict) else st.session_state.events
+            events_list = st.session_state.events.get("events")
             
             for event in events_list[:5]:
                 title = event.get("title", event.get("summary", "Untitled Event"))
