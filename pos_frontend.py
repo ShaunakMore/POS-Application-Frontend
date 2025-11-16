@@ -431,7 +431,7 @@ elif page == "⚙️ Settings":
     with col3:
         st.markdown("""
         <div class="panel-card">
-            <h4>🧠 ChromaDB</h4>
+            <h4>🧠 PineconeDB</h4>
             <p style="color: #10b981;">✅ Connected</p>
         </div>
         """, unsafe_allow_html=True)
@@ -441,7 +441,7 @@ elif page == "⚙️ Settings":
     st.subheader("🤖 AI Model Info")
     st.markdown("""
     <div class="panel-card">
-        <p><strong>Model:</strong> Gemini 2.0 Flash Lite</p>
+        <p><strong>Model:</strong> Gemini 2.5 Flash</p>
         <p><strong>Provider:</strong> Google AI</p>
         <p><strong>Backend:</strong> FastAPI + LangGraph</p>
         <p><strong>Version:</strong> 1.0.0</p>
