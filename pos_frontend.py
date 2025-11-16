@@ -302,7 +302,7 @@ if page == "💬 Chat":
         if not st.session_state.tasks:
             fetch_tasks()
         
-        if st.session_state.tasks:
+        if st.session_state.tasks.get("tasks"):
             # Handle both nested and flat response structures
             tasks_list = st.session_state.tasks.get("tasks")
             print(st.session_state.tasks)
@@ -346,7 +346,7 @@ if page == "💬 Chat":
         if not st.session_state.events:
             fetch_events()
         
-        if st.session_state.events:
+        if st.session_state.events.get("events"):
             # Handle both nested and flat response structures
             events_list = st.session_state.events.get("events")
             
@@ -381,7 +381,7 @@ if page == "💬 Chat":
         if not st.session_state.memories:
             fetch_memories()
         
-        if st.session_state.memories:
+        if st.session_state.memories.get("memories"):
             # Handle both nested and flat response structures
             memories_list = st.session_state.memories.get("memories")
             filtered_memories = memories_list
