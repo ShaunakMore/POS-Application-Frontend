@@ -112,7 +112,7 @@ def fetch_tasks():
             st.session_state.tasks = response.json()
             return True
     except Exception as e:
-        st.error(f"❌ Failed to fetch tasks: {str(e)}")
+        st.error(f"❌ Failed to fetch tasks")
     return False
 
 def fetch_memories():
@@ -123,7 +123,7 @@ def fetch_memories():
             st.session_state.memories = response.json()
             return True
     except Exception as e:
-        st.error(f"❌ Failed to fetch memories: {str(e)}")
+        st.error(f"❌ Failed to fetch memories")
     return False
 
 def fetch_events():
@@ -134,7 +134,7 @@ def fetch_events():
             st.session_state.events = response.json()
             return True
     except Exception as e:
-        st.error(f"❌ Failed to fetch events: {str(e)}")
+        st.error(f"❌ Failed to fetch events")
     return False
 
 def send_query(prompt):
@@ -150,7 +150,7 @@ def send_query(prompt):
         else:
             st.error(f"❌ Backend error: {response.status_code}")
     except Exception as e:
-        st.error(f"❌ Failed to send query: {str(e)}")
+        st.error(f"❌ Failed to send query")
     return None
 
 # Sidebar navigation
