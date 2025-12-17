@@ -346,7 +346,7 @@ if page == "💬 Chat":
         if not st.session_state.events:
             fetch_events()
         
-        if st.session_state.events.get("events"):
+        if st.session_state.events:
             # Handle both nested and flat response structures
             events_list = st.session_state.events.get("events")
             
