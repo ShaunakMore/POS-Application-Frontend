@@ -146,7 +146,7 @@ def send_query(prompt):
             timeout=60
         )
         if response.status_code == 200:
-            return response.json()
+            return response
         else:
             st.error(f"❌ Backend error: {response.status_code}")
     except Exception as e:
